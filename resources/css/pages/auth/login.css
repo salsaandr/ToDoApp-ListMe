@@ -1,0 +1,197 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Styling Kontainer Utama Loading */
+#auth-loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Dibuat flex agar konten (bola) di tengah */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffeedb; /* Biru List-Me dengan sedikit transparansi */
+    z-index: 9999;
+}
+
+/* Kelas untuk menyembunyikan loading screen setelah dimuat (Dipicu oleh JS) */
+.loaded #loading-screen {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Styling Bola */
+.ball {
+    width: 60px;
+    height: 60px;
+    background-color: #8b597b; 
+    border-radius: 50%;
+    margin-bottom: 5px; /* Jarak default ke bayangan */
+    
+    /* Z-INDEX WAJIB: Bola di depan bayangan */
+    position: relative; 
+    z-index: 2; 
+
+    animation: bounce 0.6s infinite alternate; 
+    box-shadow: 
+        inset 0 0 10px rgba(255, 255, 255, 0.5), 
+        0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes untuk Animasi Memantul (Bola) */
+@keyframes bounce {
+    0% {
+        transform: translateY(-80px); /* Posisi tertinggi */
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    100% {
+        /* Sentuhan halus, tidak menembus bayangan */
+        transform: translateY(-5px); 
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+/* Styling Bayangan */
+.shadow {
+    width: 65px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    
+    /* Z-INDEX WAJIB: Bayangan di belakang bola */
+    position: relative; 
+    z-index: 1; 
+
+    animation: shadow-squeeze 0.6s infinite alternate; 
+}
+
+/* Keyframes untuk Animasi Bayangan (Squeeze) */
+@keyframes shadow-squeeze {
+    0% {
+        /* Tertekan saat bola di bawah */
+        transform: scale(0.6, 1) translateY(0); 
+        opacity: 0.8; 
+    }
+    100% {
+        /* Normal saat bola di atas */
+        transform: scale(1, 1) translateY(0);
+        opacity: 0.4;
+    }
+}
+
+/* Styling Loading Text/Button */
+.loading-bar {
+    margin-top: 30px; 
+    color: #493129; 
+    font-weight: bold;
+}
+
+
+/* ========================================= */
+/* 2. CSS LAYOUT UTAMA & CARD */
+/* ========================================= */
+
+body {
+    /* Mencegah latar belakang body default Tailwnd menimpa gradien */
+    background: linear-gradient(135deg, #F7F9FC 0%, #EBEBEB 100%) !important;
+}
+
+.login-card-wrapper { 
+    /* GRADIENT BARU */
+    background: linear-gradient(135deg, #F7F9FC 0%, #EBEBEB 100%) !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-card {
+    background-color: #ffffff; /* Tetap putih */
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 400px; 
+}
+
+/* Logo di atas form */
+.list-me-logo {
+    font-size: 60px; 
+    color: #8B597B; /* Ganti logo menjadi Ungu */
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+/* ========================================= */
+/* 3. CSS FORM ELEMENTS */
+/* ========================================= */
+
+/* Input Fields */
+input[type="email"], input[type="password"], input[type="text"] {
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+/* Focus Input Border (Ganti ke Ungu) */
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+    border-color: #8B597B !important; 
+    box-shadow: 0 0 0 3px rgba(139, 89, 123, 0.3) !important; 
+}
+
+/* Tombol Aksi - Wrapper */
+.form-actions {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+/* Tombol Login/Register (Ganti ke Ungu) */
+.btn-login {
+    background-color: #8B597B !important; 
+    
+}
+
+.btn-login:hover {
+    background-color: #794D6A !important;
+}
+
+/* Hyperlink (Ganti ke Ungu) */
+.form-link {
+    color: #8B597B !important;
+    text-decoration: none !important;
+    transition: color 0.3s;
+    margin-right: auto;
+    margin-left: auto; 
+    font-size: 0.875rem; 
+}
+
+.form-link:hover {
+    color: #794D6A !important;
+}
+
+/* ========================================= */
+/* 4. OVERRIDE WARNA TEKS (Cokelat) */
+/* ========================================= */
+
+/* Mengganti semua teks di dalam card menjadi Cokelat Gelap */
+/* .login-card * {
+    color: #48342d !important; 
+} */
+
+/* Mengembalikan warna link ke Ungu */
+.form-link {
+    color: #8B597B !important;
+}
+
+/* Mengembalikan warna label ke warna yang lebih terang */
+.login-card label {
+    color: #5d473d !important; 
+    font-weight: 500; 
+}

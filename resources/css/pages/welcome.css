@@ -1,0 +1,68 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* ========================================= */
+/* 2. CSS LANDING PAGE (List-Me App) */
+/* ========================================= */
+.landing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffeede;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+
+/* Button Styling */
+.btn-primary {
+    background-color: #8b597b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #8b597b;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #8b597b;
+    border: 2px solid #8b597b;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #8b597b;
+    color: white;
+}
+
+.landing-container h1 {
+    /* Menggunakan !important untuk memastikan warna cokelat menimpa kelas Tailwind text-gray-800 */
+    color: #48342d !important;
+}
+
+/* Jika Anda ingin warna deskripsi "Get it done..." juga diubah */
+.landing-container p {
+    color: #5d473d; /* Cokelat sedikit lebih terang untuk deskripsi */
+}

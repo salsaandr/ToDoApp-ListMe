@@ -1,0 +1,73 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/*
+ * Palet Warna ListMe
+ * Konsisten dalam Mode Terang Saja
+ */
+
+/* Warna dari Palet:
+ * Pink : #eda3a1
+ * Coklat : #48342d
+ * Putih : #efebed
+ * Pink Pucat : #fee5d2
+ * Krem: #ffeede
+ * Ungu : #8c597c
+ */
+
+/* Latar Belakang Utama (Pink Pucat) */
+.bg-custom-light {
+    background-color: #fee5d2;
+}
+
+/* Latar Belakang Card/Modal (Putih) */
+.bg-custom-white {
+    background-color: #efebed;
+}
+
+/* Latar Belakang Item Todo (Krem) */
+.bg-custom-cream {
+    background-color: #ffeede;
+}
+
+/* Teks/Aksen Coklat Gelap */
+.text-custom-brown {
+    color: #48342d;
+}
+
+/* Aksen Ungu (Tombol Utama, Kategori, Fokus) */
+.bg-custom-purple {
+    background-color: #8c597c;
+}
+.text-custom-purple {
+    color: #8c597c;
+}
+.hover\:bg-custom-purple-dark:hover {
+    background-color: #794d6c;
+}
+
+/* Aksen Pink (Status Completed, Progress Bar, Tombol Update) */
+.bg-custom-pink {
+    background-color: #eda3a1;
+}
+.text-custom-pink {
+    color: #eda3a1;
+}
+
+/* Menyesuaikan warna fokus form input */
+.focus-custom-purple:focus {
+    --tw-ring-color: #8c597c; /* Ungu */
+    border-color: #8c597c; /* Ungu */
+}
+
+/* Styling kustom untuk Pagination (jika menggunakan link Tailwind default) */
+.pagination a, .pagination span {
+    color: #8c597c; /* Ungu */
+    border-color: #efebed; /* Putih */
+}
+.pagination .active span {
+    background-color: #eda3a1 !important; /* Pink */
+    color: white !important;
+    border-color: #eda3a1 !important; /* Pink */
+}
