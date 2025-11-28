@@ -1,41 +1,69 @@
-#ListMe – To-Do List Web App
 
-ListMe adalah aplikasi manajemen tugas harian berbasis Laravel yang membantu pengguna mencatat, mengelola, dan memantau progres tugas. Aplikasi ini dilengkapi dengan kategori tugas, progress bar, serta light/dark mode yang disimpan di database sesuai preferensi pengguna.
 
-##Fitur Utama
-1. Autentikasi (Register & Login)
-User dapat membuat akun. Dengan memasukkan nama email dan password user akan memiliki sebuah akun yang bisa digunakan untuk login mengakses web.
+# **ListMe – To-Do List Web App**
 
-2. Dashboard
-- Menampilkan semua tugas user dalam satu halaman.
-- Filter tugas berdasarkan kategori atau status.
-- Menampilkan jumlah tugas selesai dengan progress bar.
-- Dapat mengganti tema tampilan kapan saja.
+ListMe adalah aplikasi manajemen tugas harian berbasis Laravel yang membantu pengguna mencatat, mengelola, dan memantau progres tugas. Aplikasi ini dilengkapi dengan manajemen kategori, progress bar, tampilan dashboard yang informatif, tersimpan di database sesuai preferensi pengguna.
 
-3. Manajemen Tugas (CRUD To-Do)
+---
 
-- Tambah, edit, dan hapus tugas.
-- Set deadline dan status tugas: Pending, Finished, Missed.
+## **Anggota Kelompok**
 
-4. Kategori Tugas
+* **Salsa Anderia Putri Nabila — NPM 2310631170151**
+* **Shifa Fanisatuz Zahra — NPM 2310631170049**
 
-- User bisa membuat kategori seperti: Organisasi, PR, Kuliah, Kerja, dll.
-- Tugas dapat dikelompokkan sesuai kategori.
+---
 
-5. Progress Bar
-- Menghitung persentase tugas selesai perkategori dari total tugas.
-- Contoh: 7 selesai dari 10 tugas → 70%.
+## **Penjelasan Project**
 
-6. Tugas Seminggu ke Depan
-- Menampilkan tugas yang deadline-nya dalam 7 hari mendatang.
-- Membantu user fokus pada tugas yang lebih mendesak.
+ListMe dikembangkan sebagai aplikasi to-do list modern yang memudahkan pengguna untuk mengatur aktivitas harian secara lebih terstruktur. Pengguna dapat membuat akun, menambahkan tugas, mengatur kategori, memantau progres melalui dashboard, serta melihat tugas yang memiliki deadline dalam waktu dekat. Aplikasi ini dibuat menggunakan Laravel dengan tampilan yang bersih, responsif, dan mudah digunakan.
 
-##Teknologi yang Digunakan
+---
 
-- Laravel 11 – Backend framework
-- MySQL – Database
-- Blade Template – Frontend
-- Tailwind CSS / Bootstrap – Styling UI
-- Laravel Breeze – Autentikasi
-- Eloquent ORM – Manajemen data
-- Git & GitHub – Version control
+## **Fitur-Fitur Project**
+
+### **1. Autentikasi (Register & Login)**
+
+Pengguna dapat membuat akun menggunakan email, nama, dan password. Setelah membuat akun, pengguna bisa login untuk mengakses seluruh fitur aplikasi.
+
+### **2. Dashboard**
+
+* Menampilkan seluruh tugas milik pengguna dalam satu halaman.
+* Filter tugas berdasarkan kategori atau status.
+* Menampilkan jumlah tugas selesai melalui progress bar.
+
+### **3. Manajemen Tugas (CRUD To-Do)**
+
+* Menambah, mengedit, dan menghapus tugas.
+* Menentukan deadline.
+* Mengatur status tugas: Pending, Finished, atau Missed.
+
+### **4. Kategori Tugas**
+
+* Pengguna dapat membuat kategori seperti: Organisasi, PR, Kuliah, atau Kerja.
+* Setiap tugas bisa dikelompokkan berdasarkan kategori tersebut.
+
+### **5. Progress Bar**
+
+* Menghitung persentase tugas selesai berdasarkan kategori.
+* Contoh: 7 tugas selesai dari 10 total tugas menghasilkan progres 70%.
+
+### **6. Tugas Seminggu ke Depan**
+
+* Menampilkan tugas dengan deadline dalam 7 hari ke depan.
+* Membantu pengguna fokus pada tugas yang lebih penting atau mendesak.
+
+---
+
+## **Tech Stack**
+
+* **Laravel 11** — Backend framework
+* **MySQL** — Database
+* **Blade Template** — Frontend templating
+* **Tailwind CSS / Bootstrap** — Styling antarmuka
+* **Laravel Breeze** — Fitur autentikasi
+* **Eloquent ORM** — Manajemen data
+* **Git & GitHub** — Version control
+
+---
+
+
